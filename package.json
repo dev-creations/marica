@@ -12,7 +12,7 @@
   "unpkg": "dist/marica-io/marica-io.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dev-creations/marica.git"
+    "url": "git+https://github.com/dev-creations/marica.git"
   },
   "files": [
     "dist/",
@@ -26,7 +26,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
@@ -40,6 +41,7 @@
     "@storybook/html-webpack5": "^7.0.0-beta.12",
     "@storybook/testing-library": "^0.0.13",
     "@types/jest": "^27.0.3",
+    "chromatic": "^6.13.1",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0",
@@ -47,5 +49,11 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.0.0-beta.12"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-creations/marica/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/dev-creations/marica#readme",
+  "_id": "marica-io@0.0.1"
 }
