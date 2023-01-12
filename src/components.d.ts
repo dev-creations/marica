@@ -6,6 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MaiAvatar {
+        "img"?: string | null;
+        "notifications"?: number | null;
+        "username": string | null;
+    }
     interface MaiButton {
     }
     interface MyComponent {
@@ -24,6 +29,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLMaiAvatarElement extends Components.MaiAvatar, HTMLStencilElement {
+    }
+    var HTMLMaiAvatarElement: {
+        prototype: HTMLMaiAvatarElement;
+        new (): HTMLMaiAvatarElement;
+    };
     interface HTMLMaiButtonElement extends Components.MaiButton, HTMLStencilElement {
     }
     var HTMLMaiButtonElement: {
@@ -37,11 +48,17 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "mai-avatar": HTMLMaiAvatarElement;
         "mai-button": HTMLMaiButtonElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface MaiAvatar {
+        "img"?: string | null;
+        "notifications"?: number | null;
+        "username"?: string | null;
+    }
     interface MaiButton {
     }
     interface MyComponent {
@@ -59,6 +76,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "mai-avatar": MaiAvatar;
         "mai-button": MaiButton;
         "my-component": MyComponent;
     }
@@ -67,6 +85,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "mai-avatar": LocalJSX.MaiAvatar & JSXBase.HTMLAttributes<HTMLMaiAvatarElement>;
             "mai-button": LocalJSX.MaiButton & JSXBase.HTMLAttributes<HTMLMaiButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
