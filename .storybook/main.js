@@ -14,6 +14,7 @@ module.exports = {
     "options": {}
   },
   "docs": {
-    "docsPage": true
+    "docsPage": 'automatic',
+    "defaultName": 'Docs',
   }
 }
