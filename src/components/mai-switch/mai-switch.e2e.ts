@@ -48,61 +48,61 @@ describe('mai-switch', () => {
     expect(await element.getProperty("active")).toEqual(true);
   });
 
-  // it('should trigger event on click', async () => {
-  //   const page = await newE2EPage();
+  it('should trigger event on click', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent('<mai-switch active="foobar"></mai-switch>');
-  //   const element = await page.find('mai-switch');
+    await page.setContent('<mai-switch></mai-switch>');
+    const element = await page.find('mai-switch');
 
-  //   const spy = await element.spyOnEvent("switch-changed");
-  //   await element.click();
+    const spy = await element.spyOnEvent("switch-changed");
+    await element.click();
 
-  //   expect(spy).toHaveBeenCalledTimes(1);
-  //   expect(spy).toReturnWith({active: true});
-  // });
+    expect(spy).toHaveReceivedEventTimes(1);
+    expect(spy).toHaveReceivedEventDetail({active: true});
+  });
 
-  // it('should not change when status is not enabled', async () => {
-  //   const page = await newE2EPage();
+  it('should not change when status is not enabled', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent('<mai-switch enabled="true"></mai-switch>');
-  //   const element = await page.find('mai-switch');
+    await page.setContent('<mai-switch enabled="true"></mai-switch>');
+    const element = await page.find('mai-switch');
 
-  //   expect(await element.getProperty("active")).toEqual(false);
-  // });
+    expect(await element.getProperty("active")).toEqual(false);
+  });
 
-  // it('should not change when status is not enabled but remain active', async () => {
-  //   const page = await newE2EPage();
+  it('should not change when status is not enabled but remain active', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent('<mai-switch enabled="true"></mai-switch>');
-  //   const element = await page.find('mai-switch');
-  //   const spy = await element.spyOnEvent("switch-changed");
+    await page.setContent('<mai-switch enabled="true"></mai-switch>');
+    const element = await page.find('mai-switch');
+    const spy = await element.spyOnEvent("switch-changed");
 
-  //   await element.click();
-  //   expect(spy).toHaveBeenCalledTimes(1);
-  //   expect(await element.getProperty("active")).toEqual(true);
-  // });
+    await element.click();
+    expect(spy).toHaveReceivedEventTimes(1);
+    expect(await element.getProperty("active")).toEqual(true);
+  });
 
-  // it('should not change when status is not enabled', async () => {
-  //   const page = await newE2EPage();
+  it('should not change when status is not enabled', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent('<mai-switch enabled="false"></mai-switch>');
-  //   const element = await page.find('mai-switch');
-  //   const spy = await element.spyOnEvent("switch-changed");
+    await page.setContent('<mai-switch enabled="false"></mai-switch>');
+    const element = await page.find('mai-switch');
+    const spy = await element.spyOnEvent("switch-changed");
 
-  //   await element.click();
-  //   expect(spy).toHaveBeenCalledTimes(0);
-  //   expect(await element.getProperty("active")).toEqual(false);
-  // });
+    await element.click();
+    expect(spy).toHaveReceivedEventTimes(0);
+    expect(await element.getProperty("active")).toEqual(false);
+  });
 
-  // it('should not change when status is not enabled', async () => {
-  //   const page = await newE2EPage();
+  it('should not change when status is not enabled', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent('<mai-switch enabled="false" active="true"></mai-switch>');
-  //   const element = await page.find('mai-switch');
-  //   const spy = await element.spyOnEvent("switch-changed");
+    await page.setContent('<mai-switch enabled="false" active="true"></mai-switch>');
+    const element = await page.find('mai-switch');
+    const spy = await element.spyOnEvent("switch-changed");
 
-  //   await element.click();
-  //   expect(spy).toHaveBeenCalledTimes(0);
-  //   expect(await element.getProperty("active")).toEqual(true);
-  // });
+    await element.click();
+    expect(spy).toHaveReceivedEventTimes(0);
+    expect(await element.getProperty("active")).toEqual(true);
+  });
 });
