@@ -7,5 +7,7 @@ describe('mai-avatar', () => {
     await page.setContent('<mai-avatar username="Alice Bob"></mai-avatar>');
     const element = await page.find('mai-avatar');
     expect(element).toHaveClass('hydrated');
+
+    await page.close();
   });
 });
