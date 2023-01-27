@@ -7,6 +7,8 @@ describe('mai-switch', () => {
     await page.setContent('<mai-switch></mai-switch>');
     const element = await page.find('mai-switch');
     expect(element).toHaveClass('hydrated');
+
+    await page.close();
   });
 
   it('renders active default as false', async () => {
@@ -16,6 +18,8 @@ describe('mai-switch', () => {
     const element = await page.find('mai-switch');
 
     expect(await element.getProperty("active")).toEqual(false);
+
+    await page.close();
   });
 
   it('renders as active when button is clicked', async () => {
@@ -26,6 +30,8 @@ describe('mai-switch', () => {
 
     await element.click();
     expect(await element.getProperty("active")).toEqual(true);
+
+    await page.close();
   });
 
   it('should be able to activate and deactivate', async () => {
@@ -37,6 +43,8 @@ describe('mai-switch', () => {
     await element.click();
     await element.click();
     expect(await element.getProperty("active")).toEqual(false);
+
+    await page.close();
   });
 
   it('renders the initial state', async () => {
@@ -46,6 +54,8 @@ describe('mai-switch', () => {
     const element = await page.find('mai-switch');
 
     expect(await element.getProperty("active")).toEqual(true);
+
+    await page.close();
   });
 
   it('should trigger event on click', async () => {
@@ -59,6 +69,8 @@ describe('mai-switch', () => {
 
     expect(spy).toHaveReceivedEventTimes(1);
     expect(spy).toHaveReceivedEventDetail({active: true});
+
+    await page.close();
   });
 
   it('should not change when status is not enabled', async () => {
@@ -68,6 +80,8 @@ describe('mai-switch', () => {
     const element = await page.find('mai-switch');
 
     expect(await element.getProperty("active")).toEqual(false);
+
+    await page.close();
   });
 
   it('should not change when status is not enabled but remain active', async () => {
@@ -80,6 +94,8 @@ describe('mai-switch', () => {
     await element.click();
     expect(spy).toHaveReceivedEventTimes(1);
     expect(await element.getProperty("active")).toEqual(true);
+
+    await page.close();
   });
 
   it('should not change when status is not enabled', async () => {
@@ -92,6 +108,8 @@ describe('mai-switch', () => {
     await element.click();
     expect(spy).toHaveReceivedEventTimes(0);
     expect(await element.getProperty("active")).toEqual(false);
+
+    await page.close();
   });
 
   it('should not change when status is not enabled', async () => {
@@ -104,5 +122,7 @@ describe('mai-switch', () => {
     await element.click();
     expect(spy).toHaveReceivedEventTimes(0);
     expect(await element.getProperty("active")).toEqual(true);
+
+    await page.close();
   });
 });
