@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { MaiButton } from './mai-button';
 
-describe('my-component', () => {
+describe('mai-button', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
       components: [MaiButton],

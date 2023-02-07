@@ -12,6 +12,7 @@ export namespace Components {
         "username": string | null;
     }
     interface MaiButton {
+        "disabled": boolean;
     }
     interface MaiSwitch {
         "active": boolean;
@@ -75,6 +76,7 @@ declare namespace LocalJSX {
         "username"?: string | null;
     }
     interface MaiButton {
+        "disabled"?: boolean;
     }
     interface MaiSwitch {
         "active"?: boolean;

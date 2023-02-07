@@ -2,7 +2,14 @@ export default {
   title: 'Components/MaiButton',
 };
 
-const Template = (_args) => `<mai-button>Button</mai-button>`;
+const Template = (args) => `<mai-button disabled="${args.disabled}">Button</mai-button>`;
 
-export const Example = Template.bind({});
-Example.args = {};
+export const Primary = Template.bind({});
+Primary.args = {
+  disabled: false
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true
+};
