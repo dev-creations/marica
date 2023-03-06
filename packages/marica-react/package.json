@@ -1,0 +1,33 @@
+{
+  "name": "marica-react",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Enrico Gruner <enrico.gruner@dev-creations.de>",
+  "homepage": "https://github.com/dev-creations/marica#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-creations/marica.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/marica-react.test.js",
+    "build": "npm run tsc",
+    "tsc": "tsc -p ."
+  },
+  "bugs": {
+    "url": "https://github.com/dev-creations/marica/issues"
+  },
+  "dependencies": {
+    "marica-io": "*"
+  }
+}
