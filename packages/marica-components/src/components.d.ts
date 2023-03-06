@@ -12,6 +12,11 @@ export namespace Components {
         "username": string | null;
     }
     interface MaiButton {
+        "disabled": boolean;
+    }
+    interface MaiSwitch {
+        "active": boolean;
+        "enabled": boolean;
     }
     interface MyComponent {
         /**
@@ -28,6 +33,10 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface MaiSwitchCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMaiSwitchElement;
+}
 declare global {
     interface HTMLMaiAvatarElement extends Components.MaiAvatar, HTMLStencilElement {
     }
@@ -41,6 +50,12 @@ declare global {
         prototype: HTMLMaiButtonElement;
         new (): HTMLMaiButtonElement;
     };
+    interface HTMLMaiSwitchElement extends Components.MaiSwitch, HTMLStencilElement {
+    }
+    var HTMLMaiSwitchElement: {
+        prototype: HTMLMaiSwitchElement;
+        new (): HTMLMaiSwitchElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -50,6 +65,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "mai-avatar": HTMLMaiAvatarElement;
         "mai-button": HTMLMaiButtonElement;
+        "mai-switch": HTMLMaiSwitchElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -60,6 +76,12 @@ declare namespace LocalJSX {
         "username"?: string | null;
     }
     interface MaiButton {
+        "disabled"?: boolean;
+    }
+    interface MaiSwitch {
+        "active"?: boolean;
+        "enabled"?: boolean;
+        "onSwitch-changed"?: (event: MaiSwitchCustomEvent<{active: boolean}>) => void;
     }
     interface MyComponent {
         /**
@@ -78,6 +100,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "mai-avatar": MaiAvatar;
         "mai-button": MaiButton;
+        "mai-switch": MaiSwitch;
         "my-component": MyComponent;
     }
 }
@@ -87,6 +110,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "mai-avatar": LocalJSX.MaiAvatar & JSXBase.HTMLAttributes<HTMLMaiAvatarElement>;
             "mai-button": LocalJSX.MaiButton & JSXBase.HTMLAttributes<HTMLMaiButtonElement>;
+            "mai-switch": LocalJSX.MaiSwitch & JSXBase.HTMLAttributes<HTMLMaiSwitchElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
