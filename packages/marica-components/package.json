@@ -55,7 +55,10 @@
   "bugs": {
     "url": "https://github.com/dev-creations/marica/issues"
   },
-  "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/dev-creations/marica#readme",
-  "_id": "marica-components@0.1.0"
+  "author": "Enrico Gruner <enrico.gruner@dev-creations.de>",
+  "directories": {
+    "dist": "dist",
+    "loader": "loader"
+  }
 }

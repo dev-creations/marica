@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: '@marica/components',
+  namespace: 'marica-components',
   outputTargets: [
     {
       type: 'dist',
@@ -20,7 +20,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: 'marica-components',
+      componentCorePackage: '@marica/components',
       proxiesFile: '../marica-react/lib/components/stencil-generated/index.ts',
     }),
   ],
