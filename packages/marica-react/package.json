@@ -1,6 +1,6 @@
 {
   "name": "marica-react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "Enrico Gruner <enrico.gruner@dev-creations.de>",
   "homepage": "https://github.com/dev-creations/marica#readme",
@@ -28,6 +28,6 @@
     "url": "https://github.com/dev-creations/marica/issues"
   },
   "dependencies": {
-    "marica-io": "*"
+    "marica-io": "^0.1.0"
   }
 }
