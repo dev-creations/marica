@@ -29,5 +29,6 @@
   },
   "dependencies": {
     "@marica/components": "^0.1.3"
-  }
+  },
+  "gitHead": "9fd92dc341aa83b5828ea2742eefdcff064fa621"
 }

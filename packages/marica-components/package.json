@@ -60,5 +60,6 @@
   "directories": {
     "dist": "dist",
     "loader": "loader"
-  }
+  },
+  "gitHead": "9fd92dc341aa83b5828ea2742eefdcff064fa621"
 }
