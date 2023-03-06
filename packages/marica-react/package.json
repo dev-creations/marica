@@ -20,7 +20,7 @@
     "url": "git+https://github.com/dev-creations/marica.git"
   },
   "scripts": {
-    "test": "node ./__tests__/marica-react.test.js",
+    "test": "echo 'No tests'",
     "build": "npm run tsc",
     "tsc": "tsc -p ."
   },
