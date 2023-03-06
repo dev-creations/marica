@@ -30,24 +30,25 @@
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@stencil/core": "^3.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.0-beta.35",
-    "@storybook/addon-interactions": "^7.0.0-beta.35",
-    "@storybook/addon-links": "^7.0.0-beta.35",
-    "@storybook/blocks": "^7.0.0-beta.35",
-    "@storybook/html": "^7.0.0-beta.35",
-    "@storybook/html-webpack5": "^7.0.0-beta.35",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/addon-a11y": "^7.0.0-beta.61",
+    "@storybook/addon-essentials": "^7.0.0-beta.61",
+    "@storybook/addon-interactions": "^7.0.0-beta.61",
+    "@storybook/addon-links": "^7.0.0-beta.61",
+    "@storybook/blocks": "^7.0.0-beta.61",
+    "@storybook/html": "^7.0.0-beta.61",
+    "@storybook/html-webpack5": "^7.0.0-beta.61",
     "@types/jest": "^27.0.3",
-    "chromatic": "^6.15.0",
-    "jest": "^27.4.5",
+    "chromatic": "^6.17.1",
+    "jest": "^27.0.3",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^19.6.1",
+    "puppeteer": "^19.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.0-beta.35"
+    "storybook": "^7.0.0-beta.61",
+    "storybook-addon-designs": "^7.0.0-beta.2"
   },
   "license": "MIT",
   "bugs": {
