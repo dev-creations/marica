@@ -20,7 +20,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: '@marica/components',
+      componentCorePackage: '@marica-ui/components',
       proxiesFile: '../marica-react/lib/components/stencil-generated/index.ts',
     }),
   ],
