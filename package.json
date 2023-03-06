@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "storybook": "storybook dev -p 6006 --config-dir packages/marica-io/.storybook",
+    "build-storybook": "storybook build --config-dir packages/marica-io/.storybook",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "workspaces": [
     "packages/*"
