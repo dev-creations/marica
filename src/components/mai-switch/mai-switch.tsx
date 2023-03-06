@@ -1,4 +1,4 @@
-import { Component, Prop, h, EventEmitter, Event, Listen } from '@stencil/core';
+import { Component, Prop, h, EventEmitter, Event, Listen, Host } from '@stencil/core';
 
 @Component({
   tag: 'mai-switch',
@@ -32,9 +32,11 @@ export class MaiSwitch {
   }
 
   render() {
-    return <label>
-      <input type="checkbox" checked={this.active} />
-      <span class="toggle"></span>
-    </label>;
+    return <Host role="checkbox" aria-checked={String(this.active)}>
+      <label>
+        <input type="checkbox" checked={this.active} />
+        <span class="toggle"></span>
+      </label>
+    </Host>;
   }
 }
