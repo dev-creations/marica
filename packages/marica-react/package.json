@@ -1,5 +1,5 @@
 {
-  "name": "@marica-ui/components",
+  "name": "@marica-ui/react",
   "version": "0.1.8",
   "description": "Marica UI Library",
   "module": "dist/marica-ui.es.js",
