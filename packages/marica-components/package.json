@@ -2,64 +2,28 @@
   "name": "@marica-ui/components",
   "version": "0.1.7",
   "description": "Marica UI Library",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/marica-components/marica-components.esm.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dev-creations/marica.git"
-  },
+  "module": "dist/marica-ui.es.js",
+  "main": "dist/marica-ui.umd.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/",
-    "loader/"
+    "dist"
   ],
+  "private": true,
   "scripts": {
-    "build": "stencil build --docs",
-    "build:watch": "stencil build --watch --docs",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e --runInBand",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@stencil/core": "^3.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "^0.4.0",
-    "@storybook/addon-a11y": "^7.0.0-beta.61",
-    "@storybook/addon-essentials": "^7.0.0-beta.61",
-    "@storybook/addon-interactions": "^7.0.0-beta.61",
-    "@storybook/addon-links": "^7.0.0-beta.61",
-    "@storybook/blocks": "^7.0.0-beta.61",
-    "@storybook/html": "^7.0.0-beta.61",
-    "@storybook/html-webpack5": "^7.0.0-beta.61",
-    "@types/jest": "^27.0.3",
-    "chromatic": "^6.17.1",
-    "jest": "^27.0.3",
-    "jest-cli": "^27.4.5",
-    "puppeteer": "^19.7.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "storybook": "^7.0.0-beta.61",
-    "storybook-addon-designs": "^7.0.0-beta.2"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dev-creations/marica/issues"
-  },
-  "homepage": "https://github.com/dev-creations/marica#readme",
-  "author": "Enrico Gruner <enrico.gruner@dev-creations.de>",
-  "directories": {
-    "dist": "dist",
-    "loader": "loader"
-  },
-  "gitHead": "9fd92dc341aa83b5828ea2742eefdcff064fa621"
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^2.1.0"
+  }
 }
