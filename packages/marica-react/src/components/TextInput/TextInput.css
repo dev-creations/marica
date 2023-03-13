@@ -1,0 +1,65 @@
+.mai-text-input {
+  font-family: system-ui;
+  border: 0;
+  display: inline-flex;
+  box-shadow: 1px 2px 6px rgb(0 0 0 / 0.25);
+  align-items: center;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  padding: .5rem;
+  gap: 0.5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.mai-text-input > * {
+  line-height: 1.5;
+}
+
+.mai-text-input:focus-within {
+  outline: 2px solid #6A9CF5;
+}
+
+.mai-text-input:focus-within :focus {
+  outline: 0;
+}
+
+.mai-text-input input {
+  border: 0;
+  border-radius: inherit;
+}
+
+.mai-text-input:has(svg) input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.mai-text-input svg {
+  height: 1rem;
+}
+
+.mai-text-input span {
+  font-size: .875rem;
+  user-select: none;
+}
+
+.mai-text-input ::placeholder {
+  /* visibility: hidden; Not supported by firefox here */
+  opacity: 0;
+}
+
+.mai-text-input span,
+.mai-text-input :focus + span {
+  position: absolute;
+  /* the translate property wont scale well (e.g. when increasing font size / line height of the input) */
+  transform: translateY(-150%);
+  font-size: .85rem;
+  transition: all 330ms;
+}
+
+.mai-text-input :placeholder-shown:not(:focus) + span {
+  transform: translateY(0);
+  color: #ccc;
+}
