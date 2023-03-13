@@ -16,6 +16,7 @@
   align-items: center;
   box-shadow: var(--mai-button-box-shadow);
   transition: all 155ms;
+  user-select: none;
 }
 
 .mai-button:hover {
@@ -36,4 +37,9 @@
 .mai-button:active {
   transform: scale(.9);
   box-shadow: none;
+}
+
+.mai-button:disabled {
+  background-color: gray;
+  pointer-events: none;
 }

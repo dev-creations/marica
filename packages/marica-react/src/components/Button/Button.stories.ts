@@ -19,3 +19,10 @@ export const Primary: Story = {
     children: "Primary"
   },
 };
+
+export const Inactive: Story = {
+  args: {
+    children: "Inactive",
+    disabled: true
+  },
+};
