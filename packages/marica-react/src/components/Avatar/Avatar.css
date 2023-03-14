@@ -1,0 +1,53 @@
+.mai-avatar {
+  --mai-avatar-size: 3rem;
+  --mai-avatar-background-color: var(--color-primary-500);
+  --mai-avatar-notification-size: calc((1.25 / 3) * var(--mai-avatar-size));
+  --mai-avatar-notification-background-color: var(--color-primary-100);
+  --mai-avatar-foreground-color: var(--color-foreground);
+  --mai-avatar-notification-foreground-color: var(--color-background);
+
+  height: var(--mai-avatar-size);
+  width: var(--mai-avatar-size);
+  background-color: var(--mai-avatar-background-color);
+  color: var(--mai-avatar-foreground-color);
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  font-size: calc(var(--mai-avatar-size) / 3);
+}
+
+.mai-avatar[data-notifications] {
+  position: relative;
+}
+
+.mai-avatar[data-notifications]::after {
+  content: attr(data-notifications);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: var(--mai-avatar-notification-foreground-color);
+  background-color: var(--mai-avatar-notification-background-color);
+  font-size: calc(var(--mai-avatar-notification-size) / 2);
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  width: var(--mai-avatar-notification-size);
+  height: var(--mai-avatar-notification-size);
+  display: grid;
+  place-content: center;
+
+  transform: translate(25%, -25%);
+}
+
+.mai-avatar > picture,
+.mai-avatar img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  object-fit: cover;
+}
