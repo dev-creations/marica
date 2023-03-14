@@ -1,0 +1,61 @@
+.mai-switch {
+  --switch-inline-spacing: .25rem;
+  position: relative;
+  display: inline-flex;
+}
+
+.mai-switch [type='checkbox'] {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  -webkit-appearance: none; /** older iOS **/
+  outline: 0; /** for firefox **/
+}
+
+.mai-switch > * {
+  cursor: pointer;
+}
+
+.mai-switch .toggle {
+  --width: 4rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  width: var(--width);
+  background-color: rgb(165, 165, 165);
+  border-radius: 50px;
+  box-shadow: 1px 2px 6px rgb(51 51 51 / 0.2);
+}
+
+.mai-switch .toggle::before {
+  --toggle-size: 1.25rem;
+  content: "";
+  position: absolute;
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  background-color: #fff;
+  margin-inline: var(--switch-inline-spacing);
+  margin-left: var(--switch-inline-spacing); /** for older safari **/
+  /* left: 0; */
+  transition-duration: 150ms;
+  transition-property: transform;
+  border-radius: 50%;
+  z-index: 999 /** required for older safari **/;
+}
+
+.mai-switch [type='checkbox']:checked + .toggle::before {
+  transform: translateX(calc(var(--width) - var(--toggle-size) - 2 * var(--switch-inline-spacing)));
+  /* left: 100%; */
+}
+
+.mai-switch [type='checkbox']:checked + .toggle {
+  background-color: #8FD84D;
+}
+
+.mai-switch:focus-within > [type='checkbox']:focus-visible + .toggle {
+  outline: 2px solid #353638;
+  outline-offset: 2px;
+}
