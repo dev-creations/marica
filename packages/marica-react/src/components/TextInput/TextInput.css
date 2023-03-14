@@ -61,5 +61,6 @@
 
 .mai-text-input :placeholder-shown:not(:focus) + span {
   transform: translateY(0);
-  color: #ccc;
+  color: hsl(220, 3%, 40%);
+  cursor: text;
 }
