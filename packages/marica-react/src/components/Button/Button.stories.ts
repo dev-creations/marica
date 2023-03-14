@@ -8,6 +8,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     // backgroundColor: { control: 'color' },
+    onClick: { action: 'clicked' }
   },
   parameters: {
     design: {
