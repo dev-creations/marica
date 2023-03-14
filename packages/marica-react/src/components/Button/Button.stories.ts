@@ -9,6 +9,12 @@ const meta = {
   argTypes: {
     // backgroundColor: { control: 'color' },
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/fCkLO9XCKffMYLP0fxTB6w/marica.io?node-id=204%3A2"
+    }
+  },
 } satisfies Meta<typeof MaiButton>;
 
 export default meta;
