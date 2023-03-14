@@ -7,8 +7,8 @@ const meta = {
   component: MaiAvatar,
   tags: ['autodocs'],
   argTypes: {
-    // backgroundColor: { control: 'color' },
     notifications: {control: 'number'},
+    onClick: { action: 'clicked' },
   },
 } satisfies Meta<typeof MaiAvatar>;
 

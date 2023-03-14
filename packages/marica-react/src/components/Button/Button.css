@@ -14,6 +14,7 @@
   font-size: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-shadow: var(--mai-button-box-shadow);
   transition: all 155ms;
   user-select: none;
