@@ -5,3 +5,4 @@ export * from "./components/TextInput";
 export * from "./components/TextArea";
 export * from "./components/Avatar";
 export * from "./components/Switch";
+export * from "./components/Modal";
