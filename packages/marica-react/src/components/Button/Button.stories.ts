@@ -34,6 +34,14 @@ export const Primary: Story = {
   }
 };
 
+export const Success: Story = {
+  args: {
+    children: "Success",
+    variant: "success"
+  },
+  play: Primary.play
+};
+
 export const Inactive: Story = {
   args: {
     children: "Inactive",
