@@ -1,12 +1,18 @@
 .mai-drawer[role='dialog'] {
+  --mai-drawer-background-color: var(--color-foreground);
+  --mai-drawer-foreground-color: var(--color-background);
+  --mai-drawer-box-shadow: var(--box-shadow-dark-sm);
+  
+  background-color: var(--mai-drawer-background-color);
+  color: var(--mai-drawer-foreground-color);
+  box-shadow: var(--mai-drawer-box-shadow);
+
   display: flex;
   align-items: center;
   flex-direction: column;
   align-self: flex-start;
   gap: 1rem;
   padding: 1.25rem;
-  background-color: #fff;
-  box-shadow: 1px 2px 6px rgb(0 0 0 / .25);
   width: fit-content;
   height: 100%;
 }
