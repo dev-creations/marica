@@ -34,3 +34,11 @@ export const WithImage: Story = {
     image: "/img/ava.avif"
   }
 }
+
+export const WithImageWithNotification: Story = {
+  args: {
+    username: "Xuena Li",
+    notifications: 99,
+    image: "/img/ava.avif"
+  }
+}
