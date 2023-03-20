@@ -56,6 +56,7 @@ body {
   --color-danger-800: #840D2C;
   --color-danger-900: #6D072B;
   --box-shadow-dark-sm: 1px 2px 6px rgb(0 0 0 / 0.25);
-  --box-shadow-light-sm: 1px 2px 6px rgb(255 255 255 / 0.5);
+  --box-shadow-light-sm: 1px 2px 6px rgb(51 51 51 / 0.2);
+  --box-shadow-lighter-sm: 1px 2px 6px rgb(255 255 255 / 0.5);
   --box-shadow-success-sm: 1px 2px 6px rgb(0 185 0 / 0.5);
 }
