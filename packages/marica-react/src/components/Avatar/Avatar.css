@@ -10,12 +10,13 @@
   width: var(--mai-avatar-size);
   background-color: var(--mai-avatar-background-color);
   color: var(--mai-avatar-foreground-color);
+  font-size: calc(var(--mai-avatar-size) / 3);
+
   border: none;
   border-radius: 50%;
   font-weight: bold;
   display: grid;
   place-content: center;
-  font-size: calc(var(--mai-avatar-size) / 3);
   cursor: pointer;
 }
 
