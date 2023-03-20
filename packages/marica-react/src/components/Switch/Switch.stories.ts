@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 
 import { MaiSwitch } from '.';
 
@@ -7,16 +9,27 @@ const meta = {
   component: MaiSwitch,
   tags: ['autodocs'],
   argTypes: {
-    // backgroundColor: { control: 'color' },
-    onClick: { action: 'clicked' }
+    onChange: { action: 'change' }
   },
 } satisfies Meta<typeof MaiSwitch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    label: "Switch"
+    label: "MaiSwitch",
   },
+  play: ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const maiSwitch = canvas.getByTitle('MaiSwitch');
+
+    userEvent.click(maiSwitch);
+    expect(maiSwitch.querySelector("input")!.checked).toBeTruthy();
+    
+    userEvent.click(maiSwitch);
+    expect(maiSwitch.querySelector("input")!.checked).toBeFalsy();
+
+    expect(args['onChange']).toBeCalledTimes(2);
+  }
 };

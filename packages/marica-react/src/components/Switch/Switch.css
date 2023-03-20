@@ -1,5 +1,12 @@
 .mai-switch {
-  --switch-inline-spacing: .25rem;
+  --mai-switch-inline-spacing: .25rem;
+  --mai-switch-width: 4rem;
+  --mai-switch-toggle-size: 1.25rem;
+  --mai-switch-background-color: var(--color-background-light);
+  --mai-switch-box-shadow: var(--box-shadow-light-sm);
+  --mai-switch-toggle-color: var(--color-foreground);
+  --mai-switch-toggle-active-color: var(--color-success-300);
+
   position: relative;
   display: inline-flex;
 }
@@ -19,26 +26,24 @@
 }
 
 .mai-switch .toggle {
-  --width: 4rem;
   position: relative;
   display: inline-flex;
   align-items: center;
   height: 1.75rem;
-  width: var(--width);
-  background-color: rgb(165, 165, 165);
+  width: var(--mai-switch-width);
+  background-color: var(--mai-switch-background-color);
   border-radius: 50px;
-  box-shadow: 1px 2px 6px rgb(51 51 51 / 0.2);
+  box-shadow: var(--mai-switch-box-shadow);
 }
 
 .mai-switch .toggle::before {
-  --toggle-size: 1.25rem;
   content: "";
   position: absolute;
-  width: var(--toggle-size);
-  height: var(--toggle-size);
-  background-color: #fff;
-  margin-inline: var(--switch-inline-spacing);
-  margin-left: var(--switch-inline-spacing); /** for older safari **/
+  width: var(--mai-switch-toggle-size);
+  height: var(--mai-switch-toggle-size);
+  background-color: var(--mai-switch-toggle-color);
+  margin-inline: var(--mai-switch-inline-spacing);
+  margin-left: var(--mai-switch-inline-spacing); /** for older safari **/
   /* left: 0; */
   transition-duration: 150ms;
   transition-property: transform;
@@ -47,12 +52,12 @@
 }
 
 .mai-switch [type='checkbox']:checked + .toggle::before {
-  transform: translateX(calc(var(--width) - var(--toggle-size) - 2 * var(--switch-inline-spacing)));
+  transform: translateX(calc(var(--mai-switch-width) - var(--mai-switch-toggle-size) - 2 * var(--mai-switch-inline-spacing)));
   /* left: 100%; */
 }
 
 .mai-switch [type='checkbox']:checked + .toggle {
-  background-color: #8FD84D;
+  background-color: var(--mai-switch-toggle-active-color);
 }
 
 .mai-switch:focus-within > [type='checkbox']:focus-visible + .toggle {
