@@ -1,8 +1,8 @@
 .mai-button {
   --mai-button-background-color: hsl(222, 89%, 46%);
   --mai-button-outline-color: hsl(222, 89%, 46%);
-  --mai-button-foreground-color: #fff;
-  --mai-button-box-shadow: 1px 2px 6px rgb(0 0 0 / .25);
+  --mai-button-foreground-color: var(--color-foreground);
+  --mai-button-box-shadow: var(--box-shadow-dark-sm);
   --mai-button-hover-background-color: hsl(225, 93%, 32%);
   --mai-button-focus-visible-background-color: hsl(218, 87%, 69%);
 
@@ -12,12 +12,46 @@
   border-radius: .5rem;
   padding: .75rem 1.5rem;
   font-size: 1rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--mai-button-box-shadow);
   transition: all 155ms;
   user-select: none;
+}
+
+.mai-button[data-variant='success'] {
+  --mai-button-background-color: var(--color-success-500);
+  --mai-button-outline-color: var(--color-success-500);
+  --mai-button-hover-background-color: var(--color-success-600);
+  --mai-button-focus-visible-background-color: var(--color-success-600);
+}
+
+.mai-button[data-variant='info'] {
+  --mai-button-background-color: var(--color-info-600);
+  --mai-button-outline-color: var(--color-info-600);
+  --mai-button-hover-background-color: var(--color-info-500);
+  --mai-button-focus-visible-background-color: var(--color-info-500);
+}
+
+.mai-button[data-variant='warning'] {
+  --mai-button-background-color: var(--color-warning-600);
+  --mai-button-outline-color: var(--color-warning-600);
+  --mai-button-hover-background-color: var(--color-warning-500);
+  --mai-button-focus-visible-background-color: var(--color-warning-500);
+}
+
+.mai-button[data-variant='danger'] {
+  --mai-button-background-color: var(--color-danger-600);
+  --mai-button-outline-color: var(--color-danger-600);
+  --mai-button-hover-background-color: var(--color-danger-500);
+  --mai-button-focus-visible-background-color: var(--color-danger-500);
+}
+
+.mai-button:disabled {
+  background-color: var(--color-background-light);
+  pointer-events: none;
 }
 
 .mai-button:hover {
@@ -38,9 +72,4 @@
 .mai-button:active {
   transform: scale(.9);
   box-shadow: none;
-}
-
-.mai-button:disabled {
-  background-color: gray;
-  pointer-events: none;
 }

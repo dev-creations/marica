@@ -7,3 +7,4 @@ export * from "./components/Avatar";
 export * from "./components/Switch";
 export * from "./components/Modal";
 export * from "./components/Drawer";
+export * from "./components/Icon";
