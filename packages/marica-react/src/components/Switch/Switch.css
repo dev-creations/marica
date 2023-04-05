@@ -16,9 +16,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  appearance: none;
-  -webkit-appearance: none; /** older iOS **/
-  outline: 0; /** for firefox **/
+  opacity: 0;
 }
 
 .mai-switch > * {

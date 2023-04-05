@@ -10,6 +10,7 @@
   padding: 1.25rem;
   border-radius: .5rem;
   box-shadow: var(--mai-modal-box-shadow);
+  background-color: var(--mai-modal-background-color);
 }
 
 .mai-modal-transition-enter {
