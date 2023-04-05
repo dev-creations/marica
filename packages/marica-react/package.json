@@ -1,6 +1,6 @@
 {
   "name": "@marica-ui/react",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Marica UI Library",
   "module": "dist/marica-ui.es.js",
   "main": "dist/marica-ui.umd.js",
@@ -35,8 +35,8 @@
     "@storybook/testing-library": "^0.0.14-next.1",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
     "@types/react-transition-group": "^4.4.5",
+    "@vitejs/plugin-react-swc": "^3.0.0",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.0-rc.4",
     "storybook-addon-designs": "^7.0.0-beta.2",
