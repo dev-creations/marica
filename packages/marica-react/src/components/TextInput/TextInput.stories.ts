@@ -19,3 +19,10 @@ export const Primary: Story = {
     placeholder: "Username"
   },
 };
+
+export const Date: Story = {
+  args: {
+    placeholder: "Date",
+    type: "date"
+  },
+};

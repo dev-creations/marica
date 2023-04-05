@@ -1,10 +1,14 @@
 import { PropsWithChildren } from "react";
+import "iconoir/css/iconoir.css";
 import "./Icon.css";
 
-import checkmarkIcon from "../../svg/mai-checkmark.svg";
+export type MaiIconType = "check" | "more-vert" | "menu";
 
-export type MaiIconProps = {} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type MaiIconProps = {
+  type: MaiIconType,
+  title?: string,
+};
 
 export const MaiIcon = (props: PropsWithChildren<MaiIconProps>) => {
-  return <img src={checkmarkIcon} width="16" height="16" alt="" />
+  return <span className={`mai-icon iconoir-${props.type}`}></span>;
 }
