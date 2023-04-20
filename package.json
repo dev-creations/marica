@@ -6,7 +6,9 @@
     "test": "lerna run test",
     "storybook": "storybook dev -p 6006 --config-dir packages/marica-react/.storybook",
     "build-storybook": "storybook build --config-dir packages/marica-react/.storybook",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "version": "lerna version",
+    "publish": "lerna publish"
   },
   "workspaces": [
     "packages/*"
