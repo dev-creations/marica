@@ -20,6 +20,13 @@ export const Primary: Story = {
   },
 };
 
+export const Readonly: Story = {
+  args: {
+    placeholder: "Readonly",
+    readOnly: true
+  },
+};
+
 export const Date: Story = {
   args: {
     placeholder: "Date",
