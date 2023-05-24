@@ -1,0 +1,11 @@
+.mai-combobox {
+  position: relative;
+}
+
+.mai-combobox-items {
+  display: none;
+}
+
+.mai-combobox [aria-expanded='true'] + .mai-combobox-items {
+  display: block;
+}

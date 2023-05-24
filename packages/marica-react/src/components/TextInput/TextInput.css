@@ -1,4 +1,5 @@
 .mai-text-input {
+  --mai-input-background-color: #fff;
   font-family: inherit;
   border: 0;
   display: flex;
@@ -6,8 +7,8 @@
   align-items: center;
   border: 0;
   border-radius: 5px;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--mai-input-background-color);
+  color: var(--mai-input-foreground-color);
   padding: .5rem;
   gap: 0.5rem;
   position: relative;
@@ -29,6 +30,12 @@
 .mai-text-input input {
   border: 0;
   flex-grow: 1;
+  background-color: var(--mai-input-background-color);
+}
+
+.mai-text-input:has(input:read-only) {
+  --mai-input-background-color: #f1f1f1;
+  pointer-events: none;
 }
 
 .mai-text-input:has(svg) input {
